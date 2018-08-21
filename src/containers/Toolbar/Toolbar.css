@@ -1,0 +1,55 @@
+.Toolbar {
+    width: 35%;
+    padding: 16px;
+    transition: all 0.4s ease-out;
+    color: white;
+}
+
+.Toolbar div {
+    margin-top: 16px;
+}
+
+.Toolbar rect,
+.Toolbar path,
+.Toolbar circle,
+.Toolbar polygon {
+    fill: white;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 80%;
+    height: 15px;
+    background-color: #ccc;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; 
+    height: 25px; 
+    background: black; 
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: black; 
+    cursor: pointer; 
+}
+
+.menuItem:hover {
+    cursor: pointer;
+    color: aqua;
+}

@@ -1,0 +1,14 @@
+.Timer {
+    margin: 0 auto;
+    padding: 0;
+    z-index: -13;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.Timer h2 {
+    font-size: 2rem;
+    opacity: 0.25;
+}

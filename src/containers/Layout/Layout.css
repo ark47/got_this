@@ -1,0 +1,25 @@
+.Menu {
+    z-index: 500;
+    transition: all 0.2s ease-out;
+    margin: 16px;
+}
+
+.Menu i:hover {
+    cursor: pointer;
+    color: aqua;
+}
+
+.outerWrapper {
+    width: 90%;
+    height: 100vh;
+    left: 5%;
+    top: 15%;
+    position: fixed;
+    /* background-color: rgba(0,0,0,0.1); */
+    z-index: -14;
+}
+
+.outerWrapper svg {
+    position: absolute;
+    overflow: visible;
+}
