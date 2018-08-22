@@ -18,9 +18,9 @@ class Layout extends Component {
         showPointer: false,
         showBackgrounds: false,
         showPaths: false,
-        cursor: '',
-        background: '',
-        path: '',
+        cursor: null,
+        background: null,
+        path: null,
         time: 60,
         speed: 5
     }
@@ -79,8 +79,8 @@ class Layout extends Component {
         this.setState({speed: e.target.value});
     }
 
-    edrmStartHandler = () => {
-        
+    clockStop = () => {
+
         /* Countdown functions, variables, and call. */
         let initialTime = this.state.time;
         let countInt;
@@ -94,7 +94,7 @@ class Layout extends Component {
         }
     
         let countDown = () => {
-            if (this.state.time === 0) {
+            if (this.state.time === 0 || this.state.optionsShow) {
                 this.setState({time: initialTime});
                 stopFunc();
             } else {
@@ -106,6 +106,11 @@ class Layout extends Component {
 
         /* Call the clock countdown function. */
         countDownClock();
+    }
+
+    edrmStartHandler = () => {
+
+        this.clockStop();
 
         let counter = 0;
 
@@ -167,7 +172,7 @@ class Layout extends Component {
                 return the coordinates at any point along their lengths. We then simply set the stars to be positioned at these coordinates, incrementing along the lengths of the paths */
             svgPointer[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * lineLength).x-25)  + "," + (svg[0].getPointAtLength(counter * lineLength).y-25) + ")");
 
-            if (this.state.time === 0) {
+            if (this.state.time === 0 || this.state.optionsShow) {
                 return;
             }
         
@@ -201,6 +206,9 @@ class Layout extends Component {
                     start={this.edrmStartHandler}
                     time={this.state.time}
                     speed={this.state.speed}
+                    cursor={this.state.cursor}
+                    path={this.state.path}
+                    background={this.state.background}
                     changeTime={this.timeChangeHandler}
                     changeSpeed={this.speedChangeHandler}
                 />

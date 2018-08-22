@@ -14,6 +14,12 @@ class Toolbar extends Component {
 
     render () {
 
+        let startButton = 'none';
+
+        if (this.props.cursor && this.props.path && this.props.background) {
+            startButton = 'inherit';
+        }
+
         /* Message to user if they choose a time frame less than 60 seconds */
         let timeMin = null;
         if (this.props.time < 60) {
@@ -50,7 +56,7 @@ class Toolbar extends Component {
                     {timeMin}
                     <input type="range" min="30" max="300" step="30" value={this.props.time} className={classes.slider} onChange={this.props.changeTime} />
                     
-                    <div style={{marginTop: '24px'}} className={classes.menuItem} onClick={this.props.start}>Start</div>
+                    <div style={{display: startButton, marginTop: '24px', transition: '0.3s'}} className={classes.menuItem} onClick={this.props.start}>Start</div>
                 </div>
             </Aux>
         );
