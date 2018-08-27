@@ -19,7 +19,7 @@ class PreQuestion extends Component {
         } else {
             let removed = prevAnswers.indexOf(event.target.value);
             if (removed > 0) {
-                prevAnswers.splice(removed, removed);
+                prevAnswers.splice(removed, 1);
               } else {
                 prevAnswers.shift()
             }
@@ -27,7 +27,7 @@ class PreQuestion extends Component {
                 answers: prevAnswers
             })
         }
-        console.log(this.state.answers.join(', '));
+        console.log(this.state.answers);
     }
 
     render () {
