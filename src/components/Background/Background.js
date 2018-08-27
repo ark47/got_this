@@ -3,6 +3,7 @@ import classes from './Background.css';
 import Mountain from '../Backgrounds/Mountain';
 import McDeeBG from '../Backgrounds/McDeeBG';
 import Sky from '../Backgrounds/Sky'
+import Sunset from '../Backgrounds/Sunset'
 
 const background = (props) => {
     let selectedBackground;
@@ -13,8 +14,8 @@ const background = (props) => {
         case ('DarkCyan'):
             selectedBackground = <div style={{backgroundColor: 'DarkCyan'}} className={classes.Background} />
             break;
-        case ('MediumVioletRed'):
-            selectedBackground = <div style={{backgroundColor: 'MediumVioletRed'}} className={classes.Background} />
+        case ('sunset'):
+            selectedBackground = <Sunset />
             break;
         case ('sky'):
             selectedBackground = <Sky />
