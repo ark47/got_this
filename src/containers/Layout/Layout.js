@@ -9,6 +9,7 @@ import Background from '../../components/Background/Background';
 import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
 import Timer from '../../components/Timer/Timer';
+import PreQuestion from '../../containers/PreQuestion/PreQuestion';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -21,8 +22,8 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: null,
-        time: 60,
-        speed: 5
+        time: 5,
+        speed: 5,
     }
 
     optionsHandler = () => {
@@ -222,6 +223,8 @@ class Layout extends Component {
                 <Background background={this.state.background} />
 
                 <Timer time={this.state.time} />
+
+                <PreQuestion />
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
