@@ -30,3 +30,14 @@
     background-size: cover;
     z-index: -15;
 }
+
+.Sunset {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../assets/images/sunset_swing.svg) no-repeat center center;
+    background-size: cover;
+    z-index: -15;
+}
