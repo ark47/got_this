@@ -22,8 +22,8 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: null,
-        time: 5,
-        speed: 5,
+        time: 60,
+        speed: 3,
     }
 
     optionsHandler = () => {

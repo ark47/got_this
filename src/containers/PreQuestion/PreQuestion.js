@@ -36,7 +36,9 @@ class PreQuestion extends Component {
             return (
                 <label key={option} className={classes.container}>
                     <input value={option} type="checkbox" onChange={this.answerChangeHandler} />
-                    <span className={classes.checkmark}>{option.replace(/\b\w/g, l => l.toUpperCase())}</span>
+                    <span className={classes.checkmark}>
+                        {option.replace(/\b\w/g, l => l.toUpperCase())}
+                    </span>
                 </label>
             );
         });
