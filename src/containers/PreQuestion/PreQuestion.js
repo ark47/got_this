@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// import Aux from '../../hoc/Aux';
-import classes from './PreQuestion.css';
+import Aux from '../../hoc/Aux';
+import FirstQuestion from '../../components/FirstQuestion/FirstQuestion';
+import Bother from '../../components/Bother/Bother';
 
 class PreQuestion extends Component {
 
@@ -31,34 +32,14 @@ class PreQuestion extends Component {
 
     render () {
 
-        /* Map this.state.options into checkboxes. */
-        const allOptions = this.state.options.map(option => {
-            return (
-                <label key={option} className={classes.container}>
-                    <input value={option} type="checkbox" onChange={this.answerChangeHandler} />
-                    <span className={classes.checkmark}>
-                        {option.replace(/\b\w/g, l => l.toUpperCase())}
-                    </span>
-                </label>
-            );
-        });
-
-        /* Output this.state.answers into a string */
-        let answersString;
-        if (this.state.answers.length === 1) {
-            answersString = `How much is ${this.state.answers.join('')} bothering you?`;
-        } else if (this.state.answers.length === 2) {
-            answersString = `How much are ${this.state.answers[0]} and ${this.state.answers[1]} bothering you?`;
-        } else if (this.state.answers.length > 2) {
-            answersString = `How much are ${this.state.answers.slice(0, -1).join(', ')}, and ${this.state.answers.slice(-1)} bothering you?`;
-        }
-
         return (
-            <div className={classes.PreQuestion}>
-                <h1>Hey friend, what's troubling you?</h1>
-                {allOptions}
-                <p>{answersString}</p>
-            </div>
+            <Aux>
+                <FirstQuestion options={this.state.options} answerChange={this.answerChangeHandler} />
+                <Bother answer={this.state.answers} />
+
+                {/* HOW MUCH IS THIS BOTHERING YOU NOW COMP. */}
+                {/* RESULTS */}
+            </Aux>
         )
     }
 }
