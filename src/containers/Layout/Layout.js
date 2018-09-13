@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Aux';
-import Toolbar from '../Toolbar/Toolbar';
+import Toolbar from '../../components/Toolbar/Toolbar';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import PointerOptions from '../../components/PointerOptions/PointerOptions';
 import Pointer from '../../components/Pointer/Pointer';
@@ -9,7 +9,7 @@ import Background from '../../components/Background/Background';
 import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
 import Timer from '../../components/Timer/Timer';
-import PreQuestion from '../../containers/PreQuestion/PreQuestion';
+import PreQuestion from '../PreQuestion/PreQuestion'
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -224,7 +224,7 @@ class Layout extends Component {
 
                 <Timer time={this.state.time} />
 
-                <PreQuestion />
+                {/* <PreQuestion /> */}
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
