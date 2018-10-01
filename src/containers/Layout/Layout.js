@@ -225,7 +225,7 @@ class Layout extends Component {
 
                 <Timer time={this.state.time} />
 
-                <PreQuestion menu={this.optionsHandler} post={this.state.postBother} />
+                {/* <PreQuestion menu={this.optionsHandler} post={this.state.postBother} /> */}
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
