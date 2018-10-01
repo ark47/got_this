@@ -16,7 +16,7 @@ const firstQuestion = (props) => {
     });
 
     return (
-        <div className={classes.FirstQuestion}>
+        <div style={{left: props.show ? '-100%' : '25%'}} className={classes.FirstQuestion}>
             <h1>Hey friend, what's troubling you?</h1>
             {allOptions}
         </div>

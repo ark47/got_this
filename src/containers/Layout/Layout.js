@@ -22,8 +22,9 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: null,
-        time: 60,
-        speed: 3,
+        time: 2,
+        speed: 9,
+        postBother: null
     }
 
     optionsHandler = () => {
@@ -96,7 +97,7 @@ class Layout extends Component {
     
         let countDown = () => {
             if (this.state.time === 0 || this.state.optionsShow) {
-                this.setState({time: initialTime});
+                this.setState({time: initialTime, postBother: true});
                 stopFunc();
             } else {
                 let newTime = this.state.time;
@@ -224,7 +225,7 @@ class Layout extends Component {
 
                 <Timer time={this.state.time} />
 
-                {/* <PreQuestion /> */}
+                <PreQuestion menu={this.optionsHandler} post={this.state.postBother} />
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
