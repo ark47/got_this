@@ -39,5 +39,6 @@
     width: 100%;
     background: url(../../assets/images/sunset.svg) no-repeat center center;
     background-size: cover;
+    background-color: rgb(255, 175, 27);
     z-index: -15;
 }
