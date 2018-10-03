@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './PointerOptions.css';
 import Circle from '../Pointers/Circle';
 import Balloon from '../Pointers/Balloon';
+import Leaf from '../Pointers/Leaf';
 
 const pointerOptions = (props) => {
     return (
@@ -9,6 +10,7 @@ const pointerOptions = (props) => {
         <ul>
             <li onClick={() => props.cursorSelect('circle')}><svg height="100%" viewBox="0 0 50 50"><Circle /></svg></li>
             <li onClick={() => props.cursorSelect('balloon')}><svg height="100%" viewBox="0 0 50 50"><Balloon /></svg></li>
+            <li onClick={() => props.cursorSelect('leaf')}><svg height="100%" viewBox="0 0 50 50"><Leaf /></svg></li>
 
         </ul>
     </div>

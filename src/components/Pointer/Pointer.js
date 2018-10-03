@@ -1,6 +1,7 @@
 import React from 'react';
 import Circle from '../../components/Pointers/Circle';
 import Balloon from '../../components/Pointers/Balloon';
+import Leaf from '../../components/Pointers/Leaf';
 
 const pointer = (props) => {
     let selectedCursor;
@@ -10,6 +11,9 @@ const pointer = (props) => {
             break;
         case ('circle'):
             selectedCursor = <Circle />
+            break;
+        case ('leaf'):
+            selectedCursor = <Leaf />
             break;
         default:
             selectedCursor = null;
