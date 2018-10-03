@@ -26,7 +26,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../assets/images/sky_sans_balloon.png) no-repeat center center;
+    background: url(../../assets/images/sky.jpg) no-repeat center center;
     background-size: cover;
     z-index: -15;
 }

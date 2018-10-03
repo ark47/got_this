@@ -20,7 +20,7 @@ class Layout extends Component {
         showBackgrounds: false,
         showPaths: false,
         cursor: null,
-        background: 'sunset',
+        background: null,
         path: null,
         time: 2,
         speed: 9,
