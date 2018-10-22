@@ -22,7 +22,7 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: null,
-        time: 2,
+        time: 10,
         speed: 9,
         postBother: null
     }

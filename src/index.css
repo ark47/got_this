@@ -9,5 +9,9 @@ body {
   line-height: 1.4rem;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to bottom right, rgb(149,230,217), rgb(231,243,183));
+  background-image: url(./assets/images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-color: #620f8d;
 }

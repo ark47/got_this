@@ -5,4 +5,5 @@
     top: 0;
     left: 0;
     z-index: -15;
+    background-image: linear-gradient(to bottom right, rgb(149,230,217), rgb(231,243,183));
 }

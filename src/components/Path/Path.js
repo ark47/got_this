@@ -14,9 +14,6 @@ const path = (props) => {
         case ('DarkCyan'):
             selectedPath = <Track />
             break;
-        case ('MediumVioletRed'):
-            selectedPath = null
-            break;
         case ('SeaGreen'):
             selectedPath = <Infinity />
             break;
