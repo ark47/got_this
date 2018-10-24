@@ -23,3 +23,8 @@
     position: absolute;
     overflow: visible;
 }
+
+svg g {
+    height: 100px;
+    width: 100px;
+}

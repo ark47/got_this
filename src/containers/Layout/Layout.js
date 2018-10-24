@@ -9,7 +9,7 @@ import Background from '../../components/Background/Background';
 import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
 import Timer from '../../components/Timer/Timer';
-import PreQuestion from '../PreQuestion/PreQuestion'
+// import PreQuestion from '../PreQuestion/PreQuestion'
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -21,7 +21,7 @@ class Layout extends Component {
         showPaths: false,
         cursor: null,
         background: null,
-        path: null,
+        path: 'DarkCyan',
         time: 10,
         speed: 9,
         postBother: null
@@ -231,7 +231,7 @@ class Layout extends Component {
                     <div className={classes.outerWrapper} id="outerWrapper">
                         <svg width="100%" viewBox="0 0 800 300">
                             <Path path={this.state.path} />
-                            <g style={{height: '5%', width: '5%'}}>
+                            <g>
                                 <Pointer cursor={this.state.cursor} />
                             </g> 
                         </svg>   

@@ -13,8 +13,8 @@
 
 .PointerOptions li {
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     margin: 16px;
     transition: all 0.2s ease-out;
 }

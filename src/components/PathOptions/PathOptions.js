@@ -8,8 +8,6 @@ const pathOptions = (props) => {
             <li style={{backgroundColor: 'Tomato'}} onClick={() => props.pathSelect('Tomato')}></li>
             <li style={{backgroundColor: 'DarkCyan'}} onClick={() => props.pathSelect('DarkCyan')}></li>
             <li style={{backgroundColor: 'FireBrick'}} onClick={() => props.pathSelect('FireBrick')}></li>
-            <li style={{backgroundColor: 'SteelBlue'}} onClick={() => props.pathSelect('SteelBlue')}></li>
-            <li style={{backgroundColor: 'SeaGreen'}} onClick={() => props.pathSelect('SeaGreen')}></li>
         </ul>
     </div>
     );
