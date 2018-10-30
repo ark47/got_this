@@ -3,7 +3,7 @@ import React from 'react';
 const straightLine = () => {
     return (
         <path
-            d="M0,100 L800,100"
+            d="M0,150 L800,150"
             id="straight"
             style={{
                 fill:'none',

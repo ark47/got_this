@@ -8,8 +8,10 @@ import BackgroundOptions from '../../components/BackgroundOptions/BackgroundOpti
 import Background from '../../components/Background/Background';
 import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
-import Timer from '../../components/Timer/Timer';
+import Menu from '../../components/Menu/Menu'
+// import Timer from '../../components/Timer/Timer';
 // import PreQuestion from '../PreQuestion/PreQuestion'
+import Theme from '../../components/Theme/Theme';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -21,9 +23,9 @@ class Layout extends Component {
         showPaths: false,
         cursor: null,
         background: null,
-        path: 'DarkCyan',
-        time: 10,
-        speed: 9,
+        path: null,
+        time: 60,
+        speed: 3,
         postBother: null
     }
 
@@ -58,6 +60,20 @@ class Layout extends Component {
             showPaths: !this.state.showPaths,
             showBackgrounds: false,
             showPointer: false,
+        });
+    }
+
+    themeMenuHandler = () => {
+        this.setState({
+            showBackgrounds: !this.state.showBackgrounds
+        });
+    }
+
+    themeChangeHandler = (type, bg, pth) => {
+        this.setState({
+            cursor: type,
+            background: bg,
+            path: pth
         });
     }
 
@@ -192,8 +208,12 @@ class Layout extends Component {
 
         return (
             <Aux>
+
+                <Menu theme={this.themeChangeHandler} />
+
+                <Theme />
                 
-                <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div>
+                {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
                 <Backdrop show={this.state.optionsShow} />
                 
@@ -223,7 +243,7 @@ class Layout extends Component {
 
                 <Background background={this.state.background} />
 
-                <Timer time={this.state.time} />
+                {/* <Timer time={this.state.time} /> */}
 
                 {/* <PreQuestion menu={this.optionsHandler} post={this.state.postBother} /> */}
                 
@@ -231,7 +251,7 @@ class Layout extends Component {
                     <div className={classes.outerWrapper} id="outerWrapper">
                         <svg width="100%" viewBox="0 0 800 300">
                             <Path path={this.state.path} />
-                            <g>
+                            <g style={{height: '5%', width: '5%'}}>
                                 <Pointer cursor={this.state.cursor} />
                             </g> 
                         </svg>   

@@ -13,7 +13,7 @@ const background = (props) => {
             selectedBackground = <Sky />
             break;
         case ('white'):
-            selectedBackground = <div style={{backgroundColor: 'white'}} className={classes.Background} />
+            selectedBackground = <div style={{backgroundColor: '#8b4b62'}} className={classes.Background} />
             break;
         default:
             selectedBackground = null;
