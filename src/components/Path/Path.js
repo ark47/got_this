@@ -9,13 +9,13 @@ import Arch from '../Paths/Arch';
 const path = (props) => {
     let selectedPath;
     switch (props.path) {
-        case ('FireBrick'):
+        case ('sunset'):
             selectedPath = <Windblown />
             break;
-        case ('DarkCyan'):
+        case ('balloon'):
             selectedPath = <Arch />
             break;
-        case ('Tomato'):
+        case ('classic'):
             selectedPath = <StraightLine />
             break;
         default:

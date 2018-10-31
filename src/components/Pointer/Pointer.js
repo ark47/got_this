@@ -9,10 +9,10 @@ const pointer = (props) => {
         case ('balloon'):
             selectedCursor = <Balloon />
             break;
-        case ('circle'):
+        case ('classic'):
             selectedCursor = <Circle />
             break;
-        case ('leaf'):
+        case ('sunset'):
             selectedCursor = <Leaf />
             break;
         default:

@@ -7,7 +7,7 @@ const backgroundOptions = (props) => {
         <ul>
             <li style={{backgroundColor: 'Red'}} onClick={() => props.bgSelect('white')}></li>
             <li style={{backgroundColor: 'MediumVioletRed'}} onClick={() => props.bgSelect('sunset')}></li>
-            <li style={{backgroundColor: 'SeaGreen'}} onClick={() => props.bgSelect('sky')}></li>
+            <li style={{backgroundColor: 'SeaGreen'}} onClick={() => props.bgSelect('balloon')}></li>
         </ul>
     </div>
     );

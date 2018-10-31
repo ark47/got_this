@@ -26,7 +26,8 @@ class Layout extends Component {
         path: null,
         time: 60,
         speed: 3,
-        postBother: null
+        postBother: null,
+        themeShow: false
     }
 
     optionsHandler = () => {
@@ -64,16 +65,18 @@ class Layout extends Component {
     }
 
     themeMenuHandler = () => {
+        let themeState = this.state.themeShow ? false : true;
         this.setState({
-            showBackgrounds: !this.state.showBackgrounds
+            themeShow: themeState
         });
     }
 
-    themeChangeHandler = (type, bg, pth) => {
+    themeChangeHandler = (type) => {
         this.setState({
             cursor: type,
-            background: bg,
-            path: pth
+            background: type,
+            path: type,
+            themeShow: false,
         });
     }
 
@@ -113,7 +116,10 @@ class Layout extends Component {
     
         let countDown = () => {
             if (this.state.time === 0 || this.state.optionsShow) {
-                this.setState({time: initialTime, postBother: true});
+                this.setState({
+                    time: initialTime,
+                    postBother: true
+                });
                 stopFunc();
             } else {
                 let newTime = this.state.time;
@@ -149,7 +155,8 @@ class Layout extends Component {
             optionsShow: false,
             showPointer: false,
             showBackgrounds: false,
-            showPaths: false
+            showPaths: false,
+            themeShow: false
         });
 
         /* Inner Function */
@@ -190,7 +197,7 @@ class Layout extends Component {
                 return the coordinates at any point along their lengths. We then simply set the stars to be positioned at these coordinates, incrementing along the lengths of the paths */
             svgPointer[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * lineLength).x-25)  + "," + (svg[0].getPointAtLength(counter * lineLength).y-25) + ")");
 
-            if (this.state.time === 0 || this.state.optionsShow) {
+            if (this.state.time === 0 || this.state.optionsShow || this.state.themeShow) {
                 return;
             }
         
@@ -209,9 +216,9 @@ class Layout extends Component {
         return (
             <Aux>
 
-                <Menu theme={this.themeChangeHandler} />
+                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} />
 
-                <Theme />
+                <Theme theme={this.themeChangeHandler} show={this.state.themeShow} />
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 

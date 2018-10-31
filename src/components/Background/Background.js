@@ -9,11 +9,11 @@ const background = (props) => {
         case ('sunset'):
             selectedBackground = <Sunset />
             break;
-        case ('sky'):
+        case ('balloon'):
             selectedBackground = <Sky />
             break;
-        case ('white'):
-            selectedBackground = <div style={{backgroundColor: '#8b4b62'}} className={classes.Background} />
+        case ('classic'):
+            selectedBackground = <div style={{backgroundColor: 'black'}} className={classes.Background} />
             break;
         default:
             selectedBackground = null;
