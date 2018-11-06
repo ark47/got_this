@@ -1,0 +1,37 @@
+.Times {
+    position: absolute;
+    width: 100%;
+    height: 93vh;
+    top: 7vh;
+    left: 0;
+    transition: all 0.2s ease-out;
+    /* background-color: #ffd800; */
+}
+
+.Times ul {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(98, 15, 141); */
+}
+
+.Times li {
+    height: 33.333%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+.Tyme h2 {
+    cursor: pointer;
+    margin: 0;
+    color: white;
+    padding: 2vw;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}

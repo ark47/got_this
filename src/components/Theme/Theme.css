@@ -1,8 +1,8 @@
 .Theme {
     position: absolute;
     width: 100%;
-    height: 93%;
-    top: 7%;
+    height: 93vh;
+    top: 7vh;
     left: 0;
     transition: all 0.2s ease-out;
 }
@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .Theme li:hover {

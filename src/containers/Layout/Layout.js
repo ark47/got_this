@@ -9,9 +9,10 @@ import Background from '../../components/Background/Background';
 import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
 import Menu from '../../components/Menu/Menu'
-// import Timer from '../../components/Timer/Timer';
+import Timer from '../../components/Timer/Timer';
 // import PreQuestion from '../PreQuestion/PreQuestion'
 import Theme from '../../components/Theme/Theme';
+import Times from '../../components/Times/Times';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -21,6 +22,7 @@ class Layout extends Component {
         showPointer: false,
         showBackgrounds: false,
         showPaths: false,
+        timesShow: false,
         cursor: null,
         background: null,
         path: null,
@@ -64,10 +66,26 @@ class Layout extends Component {
         });
     }
 
+    timeMenuHandler = () => {
+        let timeState = this.state.timeState ? false : true;
+        this.setState({
+            timesShow: timeState,
+            themeShow: false
+        });
+    }
+
+    timeChangeHandler = (type) => {
+        this.setState({
+            time: type,
+            timesShow: false
+        });
+    }
+
     themeMenuHandler = () => {
         let themeState = this.state.themeShow ? false : true;
         this.setState({
-            themeShow: themeState
+            themeShow: themeState,
+            timesShow: false
         });
     }
 
@@ -92,9 +110,9 @@ class Layout extends Component {
         this.setState({path: pth});
     }
 
-    timeChangeHandler = (e) => {
-        this.setState({time: e.target.value});
-    }
+    // timeChangeHandler = (e) => {
+    //     this.setState({time: e.target.value});
+    // }
 
     speedChangeHandler = (e) => {
         this.setState({speed: e.target.value});
@@ -216,9 +234,11 @@ class Layout extends Component {
         return (
             <Aux>
 
-                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} />
+                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} />
 
                 <Theme theme={this.themeChangeHandler} show={this.state.themeShow} />
+
+                <Times show={this.state.timesShow} times={this.timeChangeHandler} />
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
@@ -250,7 +270,7 @@ class Layout extends Component {
 
                 <Background background={this.state.background} />
 
-                {/* <Timer time={this.state.time} /> */}
+                <Timer time={this.state.time} />
 
                 {/* <PreQuestion menu={this.optionsHandler} post={this.state.postBother} /> */}
                 
