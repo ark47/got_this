@@ -1,0 +1,46 @@
+.BugForm {
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    height: 93vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+.BugForm h2 {
+    margin: 5vh auto;
+}
+
+.BugForm textarea {
+    width: 80vw;
+    height: 40vh;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.BugForm input[type=submit] {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    border: none;
+    padding: 10px 15px;
+    margin: 5vh auto;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.BugForm input:hover {
+    background-color: #ffd800;
+}

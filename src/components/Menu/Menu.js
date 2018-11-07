@@ -13,7 +13,7 @@ const menu = (props) => {
                 <div className={classes.MenuItem} onClick={props.themeMenu} ><ThemeIcon /></div>
                 <div className={classes.MenuItem} onClick={props.timeMenu} ><TimeIcon /></div>
                 <div className={classes.MenuItem} onClick={props.start} ><Start /></div>
-                <div className={classes.MenuItem} ><Bug /></div>
+                <div className={classes.MenuItem} onClick={props.bugMenu} ><Bug /></div>
             </div>
         </Aux>
     );

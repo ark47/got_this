@@ -13,6 +13,7 @@ import Timer from '../../components/Timer/Timer';
 // import PreQuestion from '../PreQuestion/PreQuestion'
 import Theme from '../../components/Theme/Theme';
 import Times from '../../components/Times/Times';
+import BugForm from '../../components/BugForm/BugForm';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -27,9 +28,10 @@ class Layout extends Component {
         background: null,
         path: null,
         time: 60,
-        speed: 3,
+        speed: 1,
         postBother: null,
-        themeShow: false
+        themeShow: false,
+        bugFormShow: false
     }
 
     optionsHandler = () => {
@@ -66,11 +68,21 @@ class Layout extends Component {
         });
     }
 
+    bugMenuHandler = () => {
+        let bugShowState = this.state.bugFormShow ? false : true;
+        this.setState({
+            bugFormShow: bugShowState,
+            themeShow: false,
+            timesShow: false
+        });
+    }
+
     timeMenuHandler = () => {
-        let timeState = this.state.timeState ? false : true;
+        let timeState = this.state.timesShow ? false : true;
         this.setState({
             timesShow: timeState,
-            themeShow: false
+            themeShow: false,
+            bugFormShow: false
         });
     }
 
@@ -85,7 +97,8 @@ class Layout extends Component {
         let themeState = this.state.themeShow ? false : true;
         this.setState({
             themeShow: themeState,
-            timesShow: false
+            timesShow: false,
+            bugFormShow: false
         });
     }
 
@@ -234,11 +247,13 @@ class Layout extends Component {
         return (
             <Aux>
 
-                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} />
+                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} bugMenu={this.bugMenuHandler} />
 
                 <Theme theme={this.themeChangeHandler} show={this.state.themeShow} />
 
                 <Times show={this.state.timesShow} times={this.timeChangeHandler} />
+
+                <BugForm show={this.state.bugFormShow} />
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
