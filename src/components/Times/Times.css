@@ -25,13 +25,26 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s ease-in-out;
+    background-color: #620f8d;
+    cursor: pointer;
+    color: #ffd800;
+    overflow: hidden;
 }
 
-.Tyme h2 {
-    cursor: pointer;
-    margin: 0;
-    color: white;
-    padding: 2vw;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+.Times svg {
+    transform: scale(0.10);
+}
+
+.Times path {
+    fill: #ffd800;
+}
+
+.Times li:hover {
+    background-color: #ffd800;
+}
+
+.Times li:hover :nth-child(1) {
+    fill: #620f8d;
+    transform: scale(0.5);
+    transform-origin: center;
 }
