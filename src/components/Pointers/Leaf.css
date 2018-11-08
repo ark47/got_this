@@ -1,5 +1,5 @@
 .Leaf {
-    animation: rotation 6s infinite linear alternate;
+    animation: rotation 5s infinite linear;
 }
 
 @keyframes rotation {
@@ -7,6 +7,6 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(120deg);
+        transform: rotate(360deg);
     }
 }
