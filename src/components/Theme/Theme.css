@@ -13,14 +13,14 @@
     padding: 12px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease-in-out;
 }
 
 .Theme ul {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
-    background-color: rgb(98, 15, 141);
+    padding: 0;;
 }
 
 .Theme li {
@@ -35,9 +35,14 @@
     cursor: pointer;
 }
 
-.Theme li:hover {
-    opacity: 0.75;
-    /* background-blend-mode: overlay; */
+/* .Theme li:hover {
+    opacity: 0.9;
+    background-blend-mode: overlay;
+} */
+
+.Theme li:hover h2 {
+    font-size: 2em;
+    padding: 24px;
 }
 
 .Sunset {
