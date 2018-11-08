@@ -1,7 +1,8 @@
 import React from 'react';
 import StraightLine from '../Paths/StraightLine';
-import Windblown from '../Paths/Windblown';
+// import Windblown from '../Paths/Windblown';
 import Arch from '../Paths/Arch';
+import SquigglyLine from '../Paths/SquigglyLine';
 // import Infinity from '../Paths/Infinity';
 // import Track from '../Paths/Track';
 // import McArc from '../Paths/McArc';
@@ -10,7 +11,7 @@ const path = (props) => {
     let selectedPath;
     switch (props.path) {
         case ('sunset'):
-            selectedPath = <Windblown />
+            selectedPath = <SquigglyLine />
             break;
         case ('balloon'):
             selectedPath = <Arch />
