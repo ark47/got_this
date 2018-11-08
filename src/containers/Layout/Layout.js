@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Aux from '../../hoc/Aux';
-import Toolbar from '../../components/Toolbar/Toolbar';
-import Backdrop from '../../components/Backdrop/Backdrop';
-import PointerOptions from '../../components/PointerOptions/PointerOptions';
+// import Toolbar from '../../components/Toolbar/Toolbar';
+// import Backdrop from '../../components/Backdrop/Backdrop';
+// import PointerOptions from '../../components/PointerOptions/PointerOptions';
 import Pointer from '../../components/Pointer/Pointer';
-import BackgroundOptions from '../../components/BackgroundOptions/BackgroundOptions';
+// import BackgroundOptions from '../../components/BackgroundOptions/BackgroundOptions';
 import Background from '../../components/Background/Background';
-import PathOptions from '../../components/PathOptions/PathOptions';
+// import PathOptions from '../../components/PathOptions/PathOptions';
 import Path from '../../components/Path/Path';
 import Menu from '../../components/Menu/Menu'
 import Timer from '../../components/Timer/Timer';
@@ -28,7 +28,7 @@ class Layout extends Component {
         background: null,
         path: null,
         time: 60,
-        speed: 1,
+        speed: 1.5,
         postBother: null,
         themeShow: false,
         bugFormShow: false
@@ -187,7 +187,8 @@ class Layout extends Component {
             showPointer: false,
             showBackgrounds: false,
             showPaths: false,
-            themeShow: false
+            themeShow: false,
+            bugFormShow: false
         });
 
         /* Inner Function */
@@ -257,9 +258,9 @@ class Layout extends Component {
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
-                <Backdrop show={this.state.optionsShow} />
+                {/* <Backdrop show={this.state.optionsShow} /> */}
                 
-                <Toolbar
+                {/* <Toolbar
                     pathActive={this.state.showPaths}
                     bgActive={this.state.showBackgrounds}
                     pointerActive={this.state.showPointer}
@@ -281,7 +282,7 @@ class Layout extends Component {
                 
                 <BackgroundOptions show={this.state.showBackgrounds} bgSelect={this.backgroundChangeHandler} />
 
-                <PathOptions show={this.state.showPaths} pathSelect={this.pathChangeHandler} />
+                <PathOptions show={this.state.showPaths} pathSelect={this.pathChangeHandler} />*/}
 
                 <Background background={this.state.background} />
 
