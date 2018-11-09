@@ -1,8 +1,8 @@
 .BugForm {
     position: absolute;
-    top: 7vh;
+    top: 0;
     left: 0;
-    height: 93vh;
+    height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.75);
     text-align: center;
@@ -11,7 +11,7 @@
 }
 
 .BugForm h2 {
-    margin: 5vh auto;
+    margin: 10vh auto 5vh auto;
 }
 
 .BugForm textarea {
@@ -42,5 +42,46 @@
 }
 
 .BugForm input:hover {
-    background-color: #ffd800;
+    /* background-color: #ffd800; */
+    opacity: .5;
 }
+
+.Close {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.Close {
+    position: absolute;
+    right: 8vw;
+    top: 1vw;
+    width: 3vw;
+    height: 3vw;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.Close:hover {
+    opacity: .5;
+}
+
+.Close:before, .Close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 5px;
+    background-color: white;
+}
+
+  .Close:before {
+    transform: rotate(45deg);
+  }
+
+  .Close:after {
+    transform: rotate(-45deg);
+  }
