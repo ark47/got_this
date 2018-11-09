@@ -77,6 +77,12 @@ class Layout extends Component {
         });
     }
 
+    bugFormClose = () => {
+        this.setState({
+            bugFormShow: false
+        });
+    }
+
     timeMenuHandler = () => {
         let timeState = this.state.timesShow ? false : true;
         this.setState({
@@ -103,11 +109,18 @@ class Layout extends Component {
     }
 
     themeChangeHandler = (type) => {
+        let mph = this.state.speed;
+        if (type === 'balloon') {
+            mph = 4;
+        } else if (type === 'classic') {
+            mph = 6;
+        }
         this.setState({
             cursor: type,
             background: type,
             path: type,
             themeShow: false,
+            speed: mph
         });
     }
 
@@ -146,7 +159,7 @@ class Layout extends Component {
         }
     
         let countDown = () => {
-            if (this.state.time === 0 || this.state.optionsShow) {
+            if (this.state.time === 0 || this.state.timesShow || this.state.themeShow || this.state.bugFormShow) {
                 this.setState({
                     time: initialTime,
                     postBother: true
@@ -254,7 +267,7 @@ class Layout extends Component {
 
                 <Times show={this.state.timesShow} times={this.timeChangeHandler} />
 
-                <BugForm show={this.state.bugFormShow} />
+                <BugForm show={this.state.bugFormShow} close={this.bugFormClose} />
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
@@ -286,7 +299,7 @@ class Layout extends Component {
 
                 <Background background={this.state.background} />
 
-                <Timer time={this.state.time} />
+                <Timer path={this.state.path} time={this.state.time} />
 
                 {/* <PreQuestion menu={this.optionsHandler} post={this.state.postBother} /> */}
                 
