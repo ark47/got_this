@@ -8,7 +8,7 @@ const bugForm = (props) => {
             <h2>Report Bug</h2>
             <form>
                 <textarea name="bug" placeholder="Enter details of the issue here."/>
-                <div style={{display: 'block'}}><input type="submit" value="Submit" /></div>
+                <div style={{display: 'block'}}><input onClick={props.submit} type="submit" value="Submit" /></div>
             </form>
         </div>
     );

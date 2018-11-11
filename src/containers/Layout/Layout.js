@@ -14,6 +14,7 @@ import Timer from '../../components/Timer/Timer';
 import Theme from '../../components/Theme/Theme';
 import Times from '../../components/Times/Times';
 import BugForm from '../../components/BugForm/BugForm';
+import axios from '../../axios-bugs';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -122,6 +123,16 @@ class Layout extends Component {
             themeShow: false,
             speed: mph
         });
+    }
+
+    bugReportTestHandler = (event) => {
+        event.preventDefault();
+        const testData = {
+            issue: 'Everything breaks!'
+        }
+        axios.post('/bugs.json', testData).then(response => {
+            console.log(response);
+        }).catch(error => console.log(error));
     }
 
     cursorChangeHandler = (type) => {
@@ -267,7 +278,7 @@ class Layout extends Component {
 
                 <Times show={this.state.timesShow} times={this.timeChangeHandler} />
 
-                <BugForm show={this.state.bugFormShow} close={this.bugFormClose} />
+                <BugForm submit={this.bugReportTestHandler} show={this.state.bugFormShow} close={this.bugFormClose} />
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 
