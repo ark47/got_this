@@ -21,7 +21,7 @@ const timer = (props) => {
     }
     
     return (
-        <div style={{opacity: props.path ? 1 : 0}} className={classes.Timer}>
+        <div style={{opacity: props.bg ? 1 : 0}} className={classes.Timer}>
             <h2 style={{color: color}}>{min+':'+sec}</h2>
         </div>
     )

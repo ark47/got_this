@@ -316,7 +316,7 @@ class Layout extends Component {
 
                 <Background background={this.state.background} />
 
-                <Timer path={this.state.path} time={this.state.time} />
+                <Timer bg={this.state.background} time={this.state.time} />
 
                 {/* <PreQuestion menu={this.optionsHandler} post={this.state.postBother} /> */}
                 
