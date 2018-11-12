@@ -24,7 +24,6 @@ class Layout extends Component {
         showPointer: false,
         showBackgrounds: false,
         showPaths: false,
-        timesShow: false,
         cursor: null,
         background: null,
         path: 'classic',
@@ -33,6 +32,7 @@ class Layout extends Component {
         postBother: null,
         themeShow: false,
         bugFormShow: false,
+        timesShow: false
     }
 
     optionsHandler = () => {
@@ -186,6 +186,12 @@ class Layout extends Component {
     }
 
     edrmStartHandler = () => {
+
+        this.setState({
+            themeShow: false,
+            bugFormShow: false,
+            timesShow: false
+        });
 
         this.clockStop();
 
