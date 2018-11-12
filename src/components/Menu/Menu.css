@@ -30,3 +30,12 @@
 .MenuItem:hover path {
     fill: rgb(98, 15, 141);
 }
+
+@media screen and (max-height: 450px) {
+    .Menu {
+      height: 10vh;
+    }
+    .MenuItem {
+        padding: 2vh 0;
+    }
+  }

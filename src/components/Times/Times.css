@@ -48,3 +48,10 @@
     transform: scale(0.5);
     transform-origin: center;
 }
+
+@media screen and (max-height: 450px) {
+    .Times {
+        height: 86vh;
+        top: 14vh;
+    }
+}

@@ -65,3 +65,10 @@
     background-color: white;
     color: black;
 }
+
+@media screen and (max-height: 450px) {
+    .Theme {
+        height: 86vh;
+        top: 14vh;
+    }
+}
