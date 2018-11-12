@@ -58,12 +58,12 @@
 }
 
 .Basic {
-    background: black;
+    background: #333333;
 }
 
 .Basic h2 {
     background-color: white;
-    color: black;
+    color: #333333;
 }
 
 @media screen and (max-height: 450px) {

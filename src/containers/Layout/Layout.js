@@ -27,7 +27,7 @@ class Layout extends Component {
         timesShow: false,
         cursor: null,
         background: null,
-        path: null,
+        path: 'classic',
         time: 60,
         speed: 1.5,
         postBother: null,
@@ -146,6 +146,14 @@ class Layout extends Component {
     }
 
     clockStop = () => {
+
+        if (this.state.background === null) {
+            this.setState({
+                cursor: 'default',
+                background: 'default',
+                speed: 5
+            });
+        }
 
         /* Countdown functions, variables, and call. */
         let initialTime = this.state.time;
