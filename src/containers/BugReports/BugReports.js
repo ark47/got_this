@@ -19,7 +19,6 @@ class BugReports extends Component {
                 });
             }
             this.setState({bugs: fetchedBugs});
-            console.log(fetchedBugs);
         })
         .catch(error => {
             console.log(error);
