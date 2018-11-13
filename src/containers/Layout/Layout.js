@@ -15,6 +15,7 @@ import Timer from '../../components/Timer/Timer';
 import Theme from '../../components/Theme/Theme';
 import Times from '../../components/Times/Times';
 import BugForm from '../../components/BugForm/BugForm';
+import Intro from '../../components/Intro/Intro';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -26,13 +27,14 @@ class Layout extends Component {
         showPaths: false,
         cursor: null,
         background: null,
-        path: 'classic',
+        path: 'default',
         time: 60,
         speed: 1.5,
         postBother: null,
         themeShow: false,
         bugFormShow: false,
-        timesShow: false
+        timesShow: false,
+        introShow: true
     }
 
     optionsHandler = () => {
@@ -74,7 +76,8 @@ class Layout extends Component {
         this.setState({
             bugFormShow: bugShowState,
             themeShow: false,
-            timesShow: false
+            timesShow: false,
+            introShow: false
         });
     }
 
@@ -89,7 +92,8 @@ class Layout extends Component {
         this.setState({
             timesShow: timeState,
             themeShow: false,
-            bugFormShow: false
+            bugFormShow: false,
+            introShow: false
         });
     }
 
@@ -105,7 +109,8 @@ class Layout extends Component {
         this.setState({
             themeShow: themeState,
             timesShow: false,
-            bugFormShow: false
+            bugFormShow: false,
+            introShow: false
         });
     }
 
@@ -190,7 +195,8 @@ class Layout extends Component {
         this.setState({
             themeShow: false,
             bugFormShow: false,
-            timesShow: false
+            timesShow: false,
+            introShow: false
         });
 
         this.clockStop();
@@ -279,10 +285,25 @@ class Layout extends Component {
         
     }
 
+    introClose = () => {
+        this.setState({
+            introShow: false
+        });
+    }
+
     render () {
 
         return (
             <Aux>
+
+                <Intro
+                    show={this.state.introShow}
+                    close={this.introClose}
+                    start={this.edrmStartHandler}
+                    themeMenu={this.themeMenuHandler}
+                    timeMenu={this.timeMenuHandler}
+                    bugMenu={this.bugMenuHandler}
+                />
 
                 <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} bugMenu={this.bugMenuHandler} />
 

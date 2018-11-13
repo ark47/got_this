@@ -1,11 +1,11 @@
 import React from 'react';
 import StraightLine from '../Paths/StraightLine';
-// import Windblown from '../Paths/Windblown';
 import Arch from '../Paths/Arch';
 import SquigglyLine from '../Paths/SquigglyLine';
 // import Infinity from '../Paths/Infinity';
 // import Track from '../Paths/Track';
 // import McArc from '../Paths/McArc';
+// import Windblown from '../Paths/Windblown';
 
 const path = (props) => {
     let selectedPath;
@@ -18,6 +18,9 @@ const path = (props) => {
             break;
         case ('classic'):
             selectedPath = <StraightLine />
+            break;
+        case ('default'):
+            selectedPath = <SquigglyLine />
             break;
         default:
             selectedPath = null;

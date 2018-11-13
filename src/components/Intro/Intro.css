@@ -1,0 +1,122 @@
+.Intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 99;
+    background-color: #620f8d;
+    color: #ffd800;
+    transition: 0.2s;
+}
+
+.Intro h2 {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.About {
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    /* background-color: brown; */
+    text-align: center;
+    top: 15%;
+    left: 5%;
+}
+
+.About p {
+    text-align: left;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+    padding: 1.5vw 1vw;
+    margin: 0;
+    color: white;
+}
+
+.About a {
+    color: #ffd800;
+    text-decoration: none;
+}
+
+.About a:hover {
+    color: white;
+}
+
+.Nav {
+    position: absolute;
+    height: 85%;
+    width: 38%;
+    top: 15%;
+    right: 7%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 45%;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.Break {
+    width: 0.5vw;
+    height: 50%;
+    position: absolute;
+    top: 24%;
+    left: 49%;
+    background-color: #ffd800;
+    z-index: 100;
+}
+
+.MenuItem {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.MenuItem:hover path {
+    fill: white;
+}
+
+.Close {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.Close {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.Close:hover {
+    opacity: .5;
+}
+
+.Close:before, .Close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 23px;
+    width: 3px;
+    background-color: white;
+}
+
+  .Close:before {
+    transform: rotate(45deg);
+  }
+
+  .Close:after {
+    transform: rotate(-45deg);
+  }
+
+@media screen and (max-height: 450px) {
+    .About p {
+      font-size: 11px;
+    }
+  }
