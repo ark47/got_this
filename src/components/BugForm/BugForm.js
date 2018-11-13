@@ -28,7 +28,7 @@ class BugForm extends Component {
 
     render () {
         return (
-            <div style={{transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)', opacity: this.props.show ? '1' : '0'}} className={classes.BugForm}>
+            <div style={{transform: this.props.show ? 'translateY(0)' : 'translateY(-200vh)', opacity: this.props.show ? '1' : '0', display: this.props.show ? 'inherit' : 'hidden'}} className={classes.BugForm}>
                 <div className={classes.Close} onClick={this.props.close}></div>
                 <h2>Report Bug</h2>
 

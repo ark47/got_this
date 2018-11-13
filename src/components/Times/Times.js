@@ -30,10 +30,15 @@ const times = (props) => {
     });
 
     return (
-        <div style={{transform: props.show ? 'translateY(0)' : 'translateY(-100vh)', opacity: props.show ? '1' : '0'}} className={classes.Times}>
-            <ul>
-                {timeOptions}
-            </ul>
+        <div style={{
+            transform: props.show ? 'translateY(0)' : 'translateY(-200vh)',
+            opacity: props.show ? '1' : '0',
+            display: props.show ? 'inherit' : 'hidden'
+            }} 
+            className={classes.Times}>
+                <ul>
+                    {timeOptions}
+                </ul>
         </div>
     );
 }
