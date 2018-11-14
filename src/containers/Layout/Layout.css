@@ -1,3 +1,9 @@
+.Layout {
+    height: auto;
+    min-height: 100vh !important;
+    width: 100%;
+}
+
 .Menu {
     z-index: 500;
     transition: all 0.2s ease-out;
@@ -11,7 +17,7 @@
 
 .outerWrapper {
     width: 90%;
-    height: 100vh;
+    height: 85%;
     left: 5%;
     top: 15%;
     position: fixed;

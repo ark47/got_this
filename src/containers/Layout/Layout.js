@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import axios from '../../axios-bugs';
-import Aux from '../../hoc/Aux';
+// import Aux from '../../hoc/Aux';
 // import Toolbar from '../../components/Toolbar/Toolbar';
 // import Backdrop from '../../components/Backdrop/Backdrop';
 // import PointerOptions from '../../components/PointerOptions/PointerOptions';
@@ -294,7 +294,7 @@ class Layout extends Component {
     render () {
 
         return (
-            <Aux>
+            <div>
 
                 <Intro
                     show={this.state.introShow}
@@ -358,7 +358,7 @@ class Layout extends Component {
                     </div>
                 {/* CREATE NEW COMPONENT */}
 
-            </Aux>
+            </div>
         );
     }
 }
