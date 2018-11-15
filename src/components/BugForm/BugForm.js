@@ -4,7 +4,7 @@ import axios from '../../axios-bugs';
 
 class BugForm extends Component {
     state = {
-        value: ''
+        value: '',
     }
 
     changeHandler = (event) => {
@@ -19,11 +19,14 @@ class BugForm extends Component {
         const data = {
             issue: this.state.value
         }
-        // alert(issue);
 
         axios.post('/bugs.json', data).then(response => {
             console.log(response);
         }).catch(error => console.log(error));
+
+        this.setState({
+            value: ''
+        });
     }
 
     render () {
@@ -34,7 +37,7 @@ class BugForm extends Component {
 
                 <form onSubmit={this.submitHandler}>
                     <textarea value={this.state.value} onChange={this.changeHandler} placeholder="Enter details of the issue here."/>
-                    <div style={{display: 'block'}}><input type="submit" value="Submit" /></div>
+                    <div onClick={this.props.close} style={{display: 'block'}}><input type="submit" value="Submit" /></div>
                 </form>
 
             </div>
