@@ -1,0 +1,24 @@
+.Start {
+    background-color: rgba(0,0,0,.25);
+    margin: 20% auto;
+    text-align: center;
+    width: 15%;
+    z-index: 100;
+    border-radius: 25%;
+    padding: 3%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Start path {
+    fill: rgba(255, 255, 255, 0.75);
+}
+
+.Start:hover {
+    background-color: #ffd800;
+}
+
+.Start:hover path {
+    fill: rgb(98, 15, 141);
+}
+

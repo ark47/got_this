@@ -18,11 +18,11 @@
 
 .About {
     position: absolute;
-    width: 40%;
-    height: 85%;
+    width: 50%;
+    height: 70%;
     text-align: center;
     top: 15%;
-    left: 5%;
+    left: 7%;
 }
 
 .About p {
@@ -45,15 +45,19 @@
 
 .Nav {
     position: absolute;
-    height: 85%;
-    width: 38%;
+    height: 70%;
+    width: 40%;
     top: 15%;
-    right: 7%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 45% 45%;
+    right: 0;
     text-align: center;
-    /* align-items: center; */
+    margin: 0;
+}
+
+.Nav li {
+    width: 30%;
+    height: 33.33%;
+    list-style-type: none;
+    margin: 0 auto;
 }
 
 .Break {
@@ -61,7 +65,7 @@
     height: 50%;
     position: absolute;
     top: 24%;
-    left: 49%;
+    left: 64%;
     background-color: #ffd800;
     z-index: 100;
 }

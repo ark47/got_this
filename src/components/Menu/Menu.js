@@ -3,7 +3,7 @@ import Aux from '../../hoc/Aux';
 import classes from './Menu.css';
 import ThemeIcon from '../MenuItems/ThemeIcon';
 import TimeIcon from '../MenuItems/TimeIcon';
-import Start from '../MenuItems/Start';
+// import Start from '../MenuItems/Start';
 import Bug from '../MenuItems/Bug';
 
 const menu = (props) => {
@@ -12,7 +12,7 @@ const menu = (props) => {
             <div className={classes.Menu}>
                 <div className={classes.MenuItem} onClick={props.themeMenu} ><ThemeIcon /></div>
                 <div className={classes.MenuItem} onClick={props.timeMenu} ><TimeIcon /></div>
-                <div className={classes.MenuItem} onClick={props.start} ><Start /></div>
+                {/* <div className={classes.MenuItem} onClick={props.start} ><Start /></div> */}
                 <div className={classes.MenuItem} onClick={props.bugMenu} ><Bug /></div>
             </div>
         </Aux>

@@ -16,6 +16,7 @@ import Theme from '../../components/Theme/Theme';
 import Times from '../../components/Times/Times';
 import BugForm from '../../components/BugForm/BugForm';
 import Intro from '../../components/Intro/Intro';
+import Start from '../../components/Start/Start';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -28,13 +29,14 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: 'default',
-        time: 60,
+        time: 5,
         speed: 1.5,
         postBother: null,
         themeShow: false,
         bugFormShow: false,
         timesShow: false,
-        introShow: true
+        introShow: true,
+        showStart: true
     }
 
     optionsHandler = () => {
@@ -176,7 +178,8 @@ class Layout extends Component {
             if (this.state.time === 0 || this.state.timesShow || this.state.themeShow || this.state.bugFormShow) {
                 this.setState({
                     time: initialTime,
-                    postBother: true
+                    postBother: true,
+                    showStart: true
                 });
                 stopFunc();
             } else {
@@ -196,7 +199,8 @@ class Layout extends Component {
             themeShow: false,
             bugFormShow: false,
             timesShow: false,
-            introShow: false
+            introShow: false,
+            showPointer: false
         });
 
         this.clockStop();
@@ -222,7 +226,8 @@ class Layout extends Component {
             showBackgrounds: false,
             showPaths: false,
             themeShow: false,
-            bugFormShow: false
+            bugFormShow: false,
+            showStart: false
         });
 
         // const choice = {
@@ -299,13 +304,14 @@ class Layout extends Component {
                 <Intro
                     show={this.state.introShow}
                     close={this.introClose}
-                    start={this.edrmStartHandler}
                     themeMenu={this.themeMenuHandler}
                     timeMenu={this.timeMenuHandler}
                     bugMenu={this.bugMenuHandler}
                 />
 
-                <Menu start={this.edrmStartHandler} themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} bugMenu={this.bugMenuHandler} />
+                <Start show={this.state.showStart} start={this.edrmStartHandler} />
+
+                <Menu  themeMenu={this.themeMenuHandler} timeMenu={this.timeMenuHandler} bugMenu={this.bugMenuHandler} />
 
                 <Theme theme={this.themeChangeHandler} show={this.state.themeShow} />
 

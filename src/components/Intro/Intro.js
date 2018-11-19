@@ -1,7 +1,6 @@
 import React from 'react';
 import ThemeIntro from './ThemeIntro';
 import TimeIntro from './TimeIntro';
-import StartIntro from './StartIntro';
 import BugIntro from './BugIntro';
 import EMDR from './EMDR';
 import classes from './Intro.css';
@@ -22,12 +21,11 @@ const intro = (props) => {
                     </p>
                 </div>
                 <div className={classes.Break}></div>
-                <div className={classes.Nav}>
-                    <div className={classes.MenuItem} onClick={props.themeMenu}><ThemeIntro /></div>
-                    <div className={classes.MenuItem} onClick={props.timeMenu}><TimeIntro /></div>
-                    <div className={classes.MenuItem} onClick={props.start}><StartIntro /></div>
-                    <div className={classes.MenuItem} onClick={props.bugMenu}><BugIntro /></div>
-                </div>
+                <ul className={classes.Nav}>
+                    <li className={classes.MenuItem} onClick={props.themeMenu}><ThemeIntro /></li>
+                    <li className={classes.MenuItem} onClick={props.timeMenu}><TimeIntro /></li>
+                    <li className={classes.MenuItem} onClick={props.bugMenu}><BugIntro /></li>
+                </ul>
         </div>
     );
 }
