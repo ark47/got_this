@@ -29,7 +29,7 @@ class Layout extends Component {
         cursor: null,
         background: null,
         path: 'default',
-        time: 5,
+        time: 60,
         speed: 1.5,
         postBother: null,
         themeShow: false,
