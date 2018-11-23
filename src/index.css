@@ -15,8 +15,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(./assets/images/logo.svg);
-  background-position: 3% 97%;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 10%;
+  background-size: 35%;
   background-color: #620f8d;
 }

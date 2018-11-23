@@ -15,8 +15,8 @@
 }
 
 .BugForm textarea {
-    width: 80vw;
-    height: 40vh;
+    width: 80%;
+    height: 50vh;
     border: none;
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 1px;
@@ -47,22 +47,17 @@
 }
 
 .Close {
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    opacity: 1;
+    cursor: pointer;
+    padding: 0 1vw;
     height: 50px;
     width: 50px;
-    position: relative;
     box-sizing: border-box;
     line-height: 50px;
     display: inline-block;
-}
-
-.Close {
-    position: absolute;
-    right: 8vw;
-    top: 1vw;
-    width: 3vw;
-    height: 3vw;
-    opacity: 1;
-    cursor: pointer;
 }
 
 .Close:hover {
@@ -73,8 +68,8 @@
     position: absolute;
     left: 15px;
     content: ' ';
-    height: 33px;
-    width: 5px;
+    height: 23px;
+    width: 3px;
     background-color: white;
 }
 

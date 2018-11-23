@@ -39,7 +39,6 @@ class BugForm extends Component {
                     <textarea value={this.state.value} onChange={this.changeHandler} placeholder="Enter details of the issue here."/>
                     <div onClick={this.props.close} style={{display: 'block'}}><input type="submit" value="Submit" /></div>
                 </form>
-
             </div>
         );
     }
