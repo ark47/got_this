@@ -27,7 +27,7 @@ class Layout extends Component {
         showBackgrounds: false,
         showPaths: false,
         cursor: null,
-        background: null,
+        background: false,
         path: 'default',
         time: 60,
         speed: 1.5,
@@ -298,6 +298,19 @@ class Layout extends Component {
 
     render () {
 
+        let positive = '';
+        switch (this.state.background) {
+            case 'classic':
+                positive = 'white'
+                break;
+            case 'sunset':
+                positive = '#5A1715'
+                break;
+            case 'balloon':
+                positive = 'red'
+                break;
+        }
+
         return (
             <div>
 
@@ -355,6 +368,7 @@ class Layout extends Component {
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
+                        <h1 style={{display: this.state.background ? 'inherit' : 'none', color: positive}}>Got This!</h1>
                         <svg width="100%" viewBox="0 0 800 300">
                             <Path path={this.state.path} />
                             <g style={{height: '5%', width: '5%'}}>

@@ -25,6 +25,15 @@
     z-index: -14;
 }
 
+.outerWrapper h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    opacity: .5;
+}
+
 .outerWrapper svg {
     position: absolute;
     overflow: visible;
