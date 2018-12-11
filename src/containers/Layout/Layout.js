@@ -4,19 +4,20 @@ import React, { Component } from 'react';
 // import Toolbar from '../../components/Toolbar/Toolbar';
 // import Backdrop from '../../components/Backdrop/Backdrop';
 // import PointerOptions from '../../components/PointerOptions/PointerOptions';
-import Pointer from '../../components/Pointer/Pointer';
+// import PreQuestion from '../PreQuestion/PreQuestion'
 // import BackgroundOptions from '../../components/BackgroundOptions/BackgroundOptions';
-import Background from '../../components/Background/Background';
 // import PathOptions from '../../components/PathOptions/PathOptions';
+import Pointer from '../../components/Pointer/Pointer';
+import Background from '../../components/Background/Background';
 import Path from '../../components/Path/Path';
 import Menu from '../../components/Menu/Menu'
 import Timer from '../../components/Timer/Timer';
-// import PreQuestion from '../PreQuestion/PreQuestion'
 import Theme from '../../components/Theme/Theme';
 import Times from '../../components/Times/Times';
 import BugForm from '../../components/BugForm/BugForm';
 import Intro from '../../components/Intro/Intro';
 import Start from '../../components/Start/Start';
+// import Speed from '../../components/Speed/Speed';
 import classes from './Layout.css';
 
 class Layout extends Component {
@@ -28,15 +29,15 @@ class Layout extends Component {
         showPaths: false,
         cursor: null,
         background: false,
-        path: 'default',
+        path: null,
         time: 60,
-        speed: 1.5,
+        speed: 1,
         postBother: null,
         themeShow: false,
         bugFormShow: false,
         timesShow: false,
         introShow: true,
-        showStart: true
+        showStart: false
     }
 
     optionsHandler = () => {
@@ -79,7 +80,8 @@ class Layout extends Component {
             bugFormShow: bugShowState,
             themeShow: false,
             timesShow: false,
-            introShow: false
+            introShow: false,
+            showStart: false
         });
     }
 
@@ -95,7 +97,7 @@ class Layout extends Component {
             timesShow: timeState,
             themeShow: false,
             bugFormShow: false,
-            introShow: false
+            introShow: false,
         });
     }
 
@@ -112,7 +114,7 @@ class Layout extends Component {
             themeShow: themeState,
             timesShow: false,
             bugFormShow: false,
-            introShow: false
+            introShow: false,
         });
     }
 
@@ -122,13 +124,16 @@ class Layout extends Component {
             mph = 4;
         } else if (type === 'classic') {
             mph = 6;
+        } else if (type === 'sunset') {
+            mph = 1.5;
         }
         this.setState({
             cursor: type,
             background: type,
             path: type,
             themeShow: false,
-            speed: mph
+            speed: mph,
+            showStart: true
         });
     }
 
@@ -149,18 +154,11 @@ class Layout extends Component {
     // }
 
     speedChangeHandler = (e) => {
+        this.clockStop();
         this.setState({speed: e.target.value});
     }
 
     clockStop = () => {
-
-        if (this.state.background === null) {
-            this.setState({
-                cursor: 'default',
-                background: 'default',
-                speed: 5
-            });
-        }
 
         /* Countdown functions, variables, and call. */
         let initialTime = this.state.time;
@@ -176,12 +174,12 @@ class Layout extends Component {
     
         let countDown = () => {
             if (this.state.time === 0 || this.state.timesShow || this.state.themeShow || this.state.bugFormShow) {
+                stopFunc();
                 this.setState({
                     time: initialTime,
                     postBother: true,
                     showStart: true
                 });
-                stopFunc();
             } else {
                 let newTime = this.state.time;
                 newTime--;
@@ -195,15 +193,19 @@ class Layout extends Component {
 
     edrmStartHandler = () => {
 
+        this.clockStop();
+
         this.setState({
+            optionsShow: false,
+            showPointer: false,
+            showBackgrounds: false,
+            showPaths: false,
             themeShow: false,
             bugFormShow: false,
-            timesShow: false,
+            showStart: false,
             introShow: false,
-            showPointer: false
+            timesShow: false
         });
-
-        this.clockStop();
 
         let counter = 0;
 
@@ -219,16 +221,6 @@ class Layout extends Component {
 
         /*	Select the length of the path */
         let lineLength = svg[0].getTotalLength();
-        
-        this.setState({
-            optionsShow: false,
-            showPointer: false,
-            showBackgrounds: false,
-            showPaths: false,
-            themeShow: false,
-            bugFormShow: false,
-            showStart: false
-        });
 
         // const choice = {
         //     userChoice: this.state.background
@@ -309,6 +301,9 @@ class Layout extends Component {
             case 'balloon':
                 positive = 'red'
                 break;
+            default:
+                positive = 'black'
+                break;
         }
 
         return (
@@ -331,6 +326,8 @@ class Layout extends Component {
                 <Times show={this.state.timesShow} times={this.timeChangeHandler} />
 
                 <BugForm show={this.state.bugFormShow} close={this.bugFormClose} />
+                
+                {/* <Speed show={this.state.path} speed={this.state.speed} changeSpeed={this.speedChangeHandler} /> */}
                 
                 {/* <div style={{color: this.state.optionsShow ? 'white' : 'black'}} className={classes.Menu}><i className="material-icons" onClick={this.optionsHandler}>menu</i></div> */}
                 

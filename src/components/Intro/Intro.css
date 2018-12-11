@@ -16,13 +16,18 @@
     margin: 0;
 }
 
+.Intro h3 {
+    color: white;
+}
+
 .About {
     position: absolute;
-    width: 50%;
+    width: 45%;
     height: 70%;
     text-align: center;
     top: 15%;
-    left: 7%;
+    left: 0%;
+    padding: 0 0 0 7%;
 }
 
 .About p {
@@ -43,29 +48,65 @@
     color: white;
 }
 
+.Eye {
+    width: 11vw;
+    margin: 0 auto;
+}
+
+.EyeBreak {
+    width: 35%;
+    height: 4px;
+    background-color: #ffd800;
+    margin: 4% auto;
+}
+
+.AboutText {
+    width: 7vw;
+    margin: 0 auto;
+}
+
 .Nav {
     position: absolute;
     height: 70%;
     width: 40%;
     top: 15%;
     right: 0;
-    text-align: center;
     margin: 0;
 }
 
 .Nav li {
-    width: 30%;
-    height: 33.33%;
     list-style-type: none;
-    margin: 0 auto;
+}
+
+.Icon {
+    width: 9vw;
+    float: left;
+    clear: both;
+}
+
+.Info {
+    float: left;
+    padding: .5% 0 0 4%;
+}
+
+.Text {
+    width: 9vw;
+}
+
+.SubBreak {
+    width: 7vw;
+    height: 3px;
+    background-color: #ffd800;
+    margin: 1vh 0;
+    transition: 0.2s;
 }
 
 .Break {
-    width: 0.5vw;
+    width: 4px;
     height: 50%;
     position: absolute;
     top: 24%;
-    left: 64%;
+    left: 55%;
     background-color: #ffd800;
     z-index: 100;
 }
@@ -73,10 +114,20 @@
 .MenuItem {
     cursor: pointer;
     transition: 0.2s;
+    height: 36%;
+}
+
+.MenuItem path {
+    fill: #ffd800;
+    transition: 0.2s;
 }
 
 .MenuItem:hover path {
     fill: white;
+}
+
+.MenuItem:hover .SubBreak {
+    background-color: white;
 }
 
 .Close {
@@ -117,5 +168,19 @@
 @media screen and (max-height: 450px) {
     .About p {
       font-size: 11px;
+    }
+    h3 {
+        font-size: 13px;
+        margin-top: 2%;
+    }
+    .SubBreak {
+        height: 2px;
+        margin-top: 1%;
+    }
+    .EyeBreak {
+        height: 3px;
+    }
+    .Break {
+        width: 3px;
     }
   }
