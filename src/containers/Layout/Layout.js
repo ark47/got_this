@@ -365,7 +365,7 @@ class Layout extends Component {
                 
                 {/* CREATE NEW COMPONENT */}
                     <div className={classes.outerWrapper} id="outerWrapper">
-                        <h1 style={{display: this.state.background ? 'inherit' : 'none', color: positive}}>Got This!</h1>
+                        <h1 style={{display: this.state.background ? 'inherit' : 'none', color: positive}}>I Got This!</h1>
                         <svg width="100%" viewBox="0 0 800 300">
                             <Path path={this.state.path} />
                             <g style={{height: '5%', width: '5%'}}>

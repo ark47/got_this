@@ -16,18 +16,20 @@
     margin: 0;
 }
 
-.Intro h3 {
+.Intro h4 {
     color: white;
+    margin-top: 1%;
+    padding-right: 15%;
+    line-height: 1.4;
 }
 
 .About {
     position: absolute;
-    width: 45%;
+    width: 30%;
     height: 70%;
     text-align: center;
     top: 15%;
-    left: 0%;
-    padding: 0 0 0 7%;
+    left: 7%;
 }
 
 .About p {
@@ -49,64 +51,68 @@
 }
 
 .Eye {
-    width: 11vw;
+    width: 10vw;
     margin: 0 auto;
 }
 
 .EyeBreak {
-    width: 35%;
-    height: 4px;
+    width: 42%;
+    height: 7px;
     background-color: #ffd800;
-    margin: 4% auto;
+    margin: 5% auto;
 }
 
 .AboutText {
-    width: 7vw;
+    width: 8vw;
     margin: 0 auto;
 }
 
 .Nav {
     position: absolute;
     height: 70%;
-    width: 40%;
+    width: 44%;
     top: 15%;
-    right: 0;
+    right: 7%;
     margin: 0;
+    
 }
 
 .Nav li {
     list-style-type: none;
+    padding: 0 7% 0 0;
+    position: relative;
+    height: 36%;
 }
 
 .Icon {
-    width: 9vw;
-    float: left;
-    clear: both;
+    width: 8vw;
 }
 
 .Info {
     float: left;
-    padding: .5% 0 0 4%;
+    position: absolute;
+    top: 0;
+    left: 10vw;
 }
 
 .Text {
-    width: 9vw;
+    width: 8vw;
 }
 
 .SubBreak {
-    width: 7vw;
-    height: 3px;
+    width: 5vw;
+    height: 4px;
     background-color: #ffd800;
     margin: 1vh 0;
     transition: 0.2s;
 }
 
 .Break {
-    width: 4px;
-    height: 50%;
+    width: 5px;
+    height: 40%;
     position: absolute;
-    top: 24%;
-    left: 55%;
+    top: 30%;
+    left: 41%;
     background-color: #ffd800;
     z-index: 100;
 }
@@ -167,11 +173,13 @@
 
 @media screen and (max-height: 450px) {
     .About p {
-      font-size: 11px;
+      font-size: 9px;
     }
-    h3 {
-        font-size: 13px;
+    h4 {
+        font-size: 10px;
         margin-top: 2%;
+        line-height: 1.2;
+        padding-right: 15%;
     }
     .SubBreak {
         height: 2px;

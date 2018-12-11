@@ -23,7 +23,7 @@ const intro = (props) => {
                     <div className={classes.EyeBreak}></div>
                     <div className={classes.AboutText}><About /></div>
                     <p>
-                        EMDR (Eye Movement Desensitization and Reprocessing) is a psychotherapy that enables people to heal from the symptoms and emotional distress that are the result of disturbing life experiences. Repeated studies show that by using EMDR therapy people can experience the benefits of psychotherapy that once took years to make a difference. Learn more <a href="http://www.emdr.com/what-is-emdr/" target="_blank" rel="noopener noreferrer">here.</a>
+                        Got This is an app to use between <a href="http://www.emdr.com/what-is-emdr/" target="_blank" rel="noopener noreferrer">EMDR</a> sessions to boost your confidence, calm your anxiety, or help you reach your goals. This is not a substitute for <a href="http://www.emdr.com/what-is-emdr/" target="_blank" rel="noopener noreferrer">EMDR</a> therapy with a clinician, but can be a great way to spend one minute for your mind when you need it the most.
                     </p>
                 </div>
                 <div className={classes.Break}></div>
@@ -33,7 +33,7 @@ const intro = (props) => {
                         <div className={classes.Info}>
                             <div className={classes.Text}><ThemeIntro /></div>
                             <div className={classes.SubBreak}></div>
-                            <h3>Select a background.</h3>
+                            <h4>Select a theme with its own backdrop and pointer to follow.</h4>
                         </div>
                     </li>
                     <li className={classes.MenuItem} onClick={props.timeMenu}>
@@ -41,7 +41,7 @@ const intro = (props) => {
                         <div className={classes.Info}>
                             <div className={classes.Text}><TimeIntro /></div>
                             <div className={classes.SubBreak}></div>
-                            <h3>Choose a length of time.</h3>
+                            <h4>Click the clock to pick a length of time that works best for you.</h4>
                         </div>
                     </li>
                     <li className={classes.MenuItem} onClick={props.bugMenu}>
@@ -49,7 +49,7 @@ const intro = (props) => {
                         <div className={classes.Info}>
                             <div className={classes.Text}><BugIntro /></div>
                             <div className={classes.SubBreak}></div>
-                            <h3>Submit a bug.</h3>
+                            <h4>Something seem off? Or not working right? Tell us all about it.</h4>
                         </div>
                     </li>
                 </ul>
