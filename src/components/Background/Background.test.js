@@ -11,5 +11,5 @@ describe('<Background />', () => {
     it('should render <Sunset /> component if case is equal to \'sunset\'', () => {
         const wrapper = shallow(<Background background={'sunset'} />);
         expect(wrapper.find(Sunset)).toHaveLength(1);
-    })
-})
+    });
+});
