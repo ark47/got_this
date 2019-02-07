@@ -125,7 +125,7 @@ class Layout extends Component {
         } else if (type === 'classic') {
             mph = 6;
         } else if (type === 'sunset') {
-            mph = 1.5;
+            mph = 3;
         }
         this.setState({
             cursor: type,
